@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fixtures page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="promo">
+            Win 2 tickets for the next game ⚽ <a href="#" class="promo-link">SIGN UP AND PARTICIPATE</a>
+        </div>
+        <div class="user-options">
+            <a href="#">Login</a> | 
+            <a href="#">Register</a> 
+            <select name="languages" id="language-select">
+                <option value="English">English</option>
+                <option value="Spanish">Spanish</option>
+            </select>
+            <button id="resetCookies">resetCookie </button>
+        </div>
+    </div>
+        <nav>
+            <div class="nav-left">
+                <a href="index.php"><img src="images/BarcaLogo.png" alt="Barca Logo" class="logo"></a>
+                <div class="dropdown">
+                    <button class="dropbtn">Club</button>
+                    <div class="dropdown-content">
+                        <a href="#">History</a>
+                        <a href="#">Stadium</a>
+                        <a href="#">Board</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Barca Teams</button>
+                    <div class="dropdown-content">
+                        <a href="#">First Team </a>
+                        <a href="#">Barca B</a>
+                        <a href="#">Women's Team</a>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            <div class="nav-right">
+                
+                <a href="Shop/sh_cart.php">Shop</a>
+                <a href="quizz/quizz.html">Quizz</a>
+            </div>
+        </nav>
+    </nav>
+<!-- Example: Adding a new heading -->
+<div class="fc-barcelona-heading">
+  
+</div>
+
+    <div id="fixtures-container">
+        <div id="past-fixtures" class="fixture-section">
+            <h2>Past Fixtures</h2>
+            <!-- Past fixtures content -->
+        </div>
+        <div id="upcoming-fixtures" class="fixture-section">
+            <h2>Upcoming Fixtures</h2>
+            <!-- Upcoming fixtures content -->
+        </div>
+    </div>
+    <div id="next-game-highlight" class="scrolling-bar"></div>
+
+
+</body>
+</html>

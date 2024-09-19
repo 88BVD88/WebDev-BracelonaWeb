@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #004D98 0%, #A50044 100%);
+}
+
+.title img {
+    width: 100px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.parallax {
+    border-radius: 30px;
+    margin-top: 5px;
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.parallax p {
+    position: relative;
+    margin-top: 1%;
+    margin-left: 5%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: #FFF;
+}
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.parallax__layer--back {
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+}
+
+.parallax__layer--base {
+    transform: translateZ(0);
+    z-index: 1;
+}
+
+section {
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 32px;
+    color: #a10000;
+    margin: 20px 0;
+    text-shadow: 1px 1px 2px rgba(232, 247, 164, 0.5);
+}
+
+.player-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    margin: 10px;
+    text-align: center;
+}
+
+.player img {
+    width: 130%;
+    height: auto;
+    border-radius: 50%;
+    border-color: #a10000;
+}
+
+.player p {
+    color: #a10000;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #004D98 0%, #A50044 100%);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative; /* Ensure this is positioned for absolute children */
+}
+
+.title img {
+    transition: transform 0.3s ease;
+}
+
+.title h3 {
+    margin-top: 0;
+    margin-bottom: 10px; 
+    color: #FFF;
+    font-size: 24px;
+    background: -webkit-linear-gradient(45deg, #FAE042, #FFC107, #FAE042);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 2s linear infinite;
+    position: relative; 
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes shine {
+    from {
+        background-position: 200% center;
+    }
+    to {
+        background-position: -200% center;
+    }
+}
+
+.title:hover img {
+    transform: scale(1.1);
+}
+
+.title h3:after {
+    content: ""; 
+    position: absolute;
+    bottom: -10px; 
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #FAE042, #FFC107);
+   
+}
+
+
+@keyframes shine {
+    from {
+        background-position: 200% center;
+    }
+    to {
+        background-position: -200% center;
+    }
+}
+
+.title:hover img {
+    transform: scale(1.1);
+}
+
+.title h3:after {
+    z-index: 1;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #FAE042, #FFC107);
+    animation: underline 6s infinite linear;
+}
+
+@keyframes underline {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 0%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+#history {
+    text-align: center;
+    color: #FFF; 
+    padding: 50px 0; 
+    position: relative; 
+    z-index: 2; 
+}
+
+.trophy {
+    margin: 20px;
+    display: inline-block;
+    text-align: center; 
+}
+
+.trophy-image {
+    width: auto;
+    height: 65px;
+    margin-bottom: 10px;
+}
+.trophy-name {
+    font-size: 12px;
+    color: #FFF;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Flip Card Styles */
+.player-flip-card {
+  position: relative;
+  width: 150px;
+  height: 225px; 
+  perspective: 1000px;
+}
+
+.player-front, .player-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 50%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.player-front {
+  background-size: cover;
+}
+
+.player-back {
+    background-color: #004D98; /* A background color that matches your theme */
+    color: #FFFFFF; /* Text color for contrast */
+    font-size: 14px; /* Adjust based on your preference */
+    padding: 15px; /* Padding for spacing inside the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center align text */
+    transform: rotateY(180deg);
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); 
+  }
+  
+  .player-back p {
+    margin: 5px 0; 
+  }
+  
+
+  .player-back p:first-child {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px; 
+  }
+  
+
+.player-flip-card:hover .player-front {
+  transform: rotateY(-180deg);
+}
+
+.player-flip-card:hover .player-back {
+  transform: rotateY(0deg);
+}
+
+
+.player img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 50%; 
+}
+
+
+.player-back p {
+  margin: 5px 0; 
+  color: #000; 
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    background: #150461;
+    color: #e4d837;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+    text-align: center;
+    font-family: Arial, sans-serif; 
+    font-size: 16px; 
+    line-height: 1.5; 
+    box-sizing: border-box;
+    vertical-align: middle; 
+}

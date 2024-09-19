@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Mochiy Pop One';
+}
+body{
+    background: url(quizzImg/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+h1{
+    width: fit-content;
+    background-color: #e4d837;
+    margin: 40px auto;
+    border-radius: 60px;
+    box-shadow: 5px 5px 0 #000;
+    padding: 20px 30px;
+}
+
+
+/* INITIAL SCREEN */
+#initial-screen{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+}
+#initial-screen{
+    margin: 60px 0;
+}
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    background: #150461;
+    color: #e4d837;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+    text-align: center;
+    font-family: Arial, sans-serif; /* Example font */
+    font-size: 16px; /* Adjust as needed */
+    line-height: 1.5; /* Adjust for vertical alignment */
+    box-sizing: border-box;
+    vertical-align: middle; /* Helps align with other inline or inline-block elements */
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* GAME SCREEN */
+#game-screen{
+    display: none;
+}
+.game-screen{
+    max-width: 600px; /* Adjusted from 800px to 600px (75%) */
+    margin: 50px auto;
+    text-align: center;
+}
+.game-screen img{
+    margin-top: 15%;
+    max-width: 300px; /* Adjusted from 400px to 300px (75%) */
+    width: 100%;
+    border-radius: 50%; /* Added for round borders */
+}
+.options{
+    max-width: 300px; /* Adjusted from 400px to 300px (75%) */
+    margin: auto;
+}
+.option{
+    display: flex;
+    position: relative;
+    align-items: center;
+    max-width: 300px; /* Adjusted from 400px to 300px (75%) */
+    margin: 30px auto;
+    cursor: pointer;
+}
+.option .letter{
+    background-color: #580078;
+    width: 37.5px;
+    height: 37.5px; 
+    font-size: 22.5px; 
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 30px; 
+    border: 5px solid #fff;
+    position: relative;
+}
+.option .name{
+    background: #fff;
+    width: 100%;
+    font-size: 18.75px; /* Adjusted for 75% */
+    position: absolute;
+    margin-left: 22.5px; /* Adjusted margin for 75% */
+    z-index: -2;
+    border-radius: 0 15px 15px 0; /* Adjusted for smoother rounded corners */
+    padding: 7px 0 7px 22.5px; /* Adjusted padding for consistency */
+}
+
+.option .nameCorrect{
+    background-color: yellowgreen;
+    color: #fff;
+}
+.option .letterCorrect{
+    background-color: yellowgreen;
+    color: #fff ;
+}
+/* classes that will be applied when the chosen option is incorrect */
+.option .nameIncorrect{
+    background-color: darkred;
+    color: #fff;
+}
+.option .letterIncorrect{
+    background-color: darkred;
+    color: #fff;
+}
+
+
+/* FINAL SCREEN */
+#final-screen{
+    margin-top: 20px;
+    display: none;
+    text-align: center;
+}
+#final-screen #numCorrect{
+    background-color: chartreuse;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+#final-screen #numIncorrect{
+    background-color: darkred;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
